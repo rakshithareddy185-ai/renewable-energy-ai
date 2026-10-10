@@ -1,0 +1,163 @@
+<<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        Private Institute Finder
+    </title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            margin:40px;
+            background:#f2f2f2;
+        }
+
+        h1{
+            color:#2c3e50;
+        }
+
+        form{
+            background:white;
+            padding:20px;
+            width:400px;
+            border-radius:10px;
+            box-shadow:0px 0px 10px gray;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin-top:10px;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            margin-top:15px;
+            background:green;
+            color:white;
+            border:none;
+        }
+
+        table{
+            margin-top:30px;
+            width:80%;
+            border-collapse:collapse;
+            background:white;
+        }
+
+        th,td{
+            border:1px solid gray;
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#3498db;
+            color:white;
+        }
+
+        a{
+            text-decoration:none;
+            color:blue;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<h1>
+Private Institute Finder with License Verification
+</h1>
+
+<hr>
+
+<h2>Student Details</h2>
+
+<form method="POST">
+
+    <input
+    type="text"
+    name="student_name"
+    placeholder="Enter Student Name"
+    required>
+
+    <input
+    type="text"
+    name="course_name"
+    placeholder="Enter Course Name"
+    required>
+
+    <input
+    type="number"
+    name="graduation_year"
+    placeholder="Enter Graduation Year"
+    required>
+
+    <button type="submit">
+        Find Institutes
+    </button>
+
+</form>
+
+{% if message %}
+
+<h3 style="color:red;">
+{{ message }}
+</h3>
+
+{% endif %}
+
+{% if institutes %}
+
+<h2>Valid Licensed Institutes</h2>
+
+<table>
+
+<tr>
+
+<th>ID</th>
+<th>Institute Name</th>
+<th>Location</th>
+<th>Course</th>
+<th>License Status</th>
+
+</tr>
+
+{% for i in institutes %}
+
+<tr>
+
+<td>{{ i.institute_id }}</td>
+
+<td>
+
+<a href="/institute/{{ i.institute_id }}">
+
+{{ i.institute_name }}
+
+</a>
+
+</td>
+
+<td>{{ i.location }}</td>
+
+<td>{{ i.course_name }}</td>
+
+<td>{{ i.license_status }}</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endif %}
+
+</body>
+</html>

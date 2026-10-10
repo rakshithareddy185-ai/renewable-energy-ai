@@ -1,0 +1,379 @@
+/* ===========================
+   GLOBAL
+=========================== */
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #141e30, #243b55);
+  color: white;
+}
+
+/* ===========================
+   DASHBOARD
+=========================== */
+
+.dashboard {
+  padding: 20px;
+  text-align: center;
+}
+
+/* ===========================
+   HEADER
+=========================== */
+
+.header h1 {
+  font-size: 42px;
+  background: linear-gradient(90deg, #00f5ff, #ff00cc, #00ff99);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header p {
+  color: #ddd;
+  margin-bottom: 25px;
+  font-size: 18px;
+}
+
+.header select {
+  padding: 12px;
+  width: 220px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===========================
+   ALERT
+=========================== */
+
+.alert-box {
+  width: 80%;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #ff9800, #ff5722);
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 0px 0px 15px rgba(0,0,0,.4);
+}
+
+/* ===========================
+   CARDS
+=========================== */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 0px 20px rgba(0,0,0,.35);
+  transition: .4s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.weather {
+  background: linear-gradient(135deg,#00c6ff,#0072ff);
+}
+
+.prediction {
+  background: linear-gradient(135deg,#ff512f,#dd2476);
+}
+
+.recommendation {
+  background: linear-gradient(135deg,#00ff99,#00c853);
+  color: black;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card h1 {
+  font-size: 38px;
+}
+
+/* ===========================
+   GRAPH
+=========================== */
+
+.graph-container {
+
+  width: 85%;
+
+  margin: 40px auto;
+
+  padding: 30px;
+
+  background: rgba(255,255,255,.08);
+
+  border-radius: 20px;
+
+  backdrop-filter: blur(12px);
+
+  box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+
+}
+
+.graph-container h2 {
+
+  color: #00f5ff;
+
+  margin-bottom: 25px;
+
+}
+
+/* ===========================
+   APPLIANCE CALCULATOR
+=========================== */
+
+.graph-container label {
+
+  display: block;
+
+  margin-top: 15px;
+
+  margin-bottom: 6px;
+
+  font-weight: bold;
+
+  font-size: 17px;
+
+}
+
+.graph-container input,
+
+.graph-container select {
+
+  width: 260px;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 16px;
+
+}
+
+.graph-container button {
+
+  margin-top: 20px;
+
+  padding: 12px 30px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: linear-gradient(90deg,#ff00cc,#3333ff);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  transition: .3s;
+
+}
+
+.graph-container button:hover {
+
+  transform: scale(1.05);
+
+}
+
+/* ===========================
+   RESULT TEXT
+=========================== */
+
+.graph-container h3 {
+
+  margin-top: 18px;
+
+}
+
+.graph-container p {
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+  color: #00ffcc;
+
+}
+
+/* ===========================
+   CHAT SECTION
+=========================== */
+
+.chat-section {
+
+  width: 75%;
+
+  margin: 40px auto;
+
+  padding: 30px;
+
+  border-radius: 20px;
+
+  background: rgba(255,255,255,.08);
+
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0px 0px 20px rgba(0,0,0,.3);
+
+}
+
+.chat-section h2 {
+
+  margin-bottom: 20px;
+
+}
+
+.chat-section input {
+
+  width: 75%;
+
+  padding: 12px;
+
+  border-radius: 10px;
+
+  border: none;
+
+  font-size: 16px;
+
+}
+
+/* ===========================
+   BUTTONS
+=========================== */
+
+.button-group {
+
+  margin-top: 20px;
+
+}
+
+.button-group button {
+
+  padding: 12px 22px;
+
+  margin: 10px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: linear-gradient(90deg,#ff00cc,#3333ff);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  transition: .3s;
+
+}
+
+.button-group button:hover {
+
+  transform: scale(1.05);
+
+}
+
+/* ===========================
+   ANSWER BOX
+=========================== */
+
+.answer-box {
+
+  margin-top: 20px;
+
+  padding: 18px;
+
+  background: rgba(255,255,255,.15);
+
+  border-radius: 15px;
+
+  min-height: 60px;
+
+  font-size: 18px;
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media(max-width:768px){
+
+.cards{
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
+.card{
+
+width:90%;
+
+}
+
+.graph-container{
+
+width:95%;
+
+padding:20px;
+
+}
+
+.chat-section{
+
+width:95%;
+
+}
+
+.chat-section input{
+
+width:90%;
+
+}
+
+.graph-container input,
+
+.graph-container select{
+
+width:90%;
+
+}
+
+.header h1{
+
+font-size:30px;
+
+}
+
+}

@@ -1,0 +1,25 @@
+# Python environments
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Node dependencies
+frontend/node_modules/
+
+# Build files
+frontend/build/
+frontend/dist/
+
+# Large ZIP backups
+*.zip
+
+# Editor files
+.vscode/
